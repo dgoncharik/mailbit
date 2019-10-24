@@ -1,0 +1,52 @@
+.mms {
+  min-height: 756px;
+  padding-top: 80px;
+  background-image: url("../img/subtract.svg");
+  background-repeat: no-repeat;
+  background-size: 490px 695px;
+  background-position: top 60px right 15px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 62px;
+    padding: 0;
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  &__text,
+  &__contacts {
+    max-width: 740px;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .mms {
+    text-align: center;
+    background-image: none;
+
+    &__text,
+    &__contacts {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__text {
+      br {
+        display: none;
+      }
+    }
+  }
+}

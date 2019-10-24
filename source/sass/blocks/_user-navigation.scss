@@ -1,0 +1,41 @@
+.user-navigation {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  min-width: 40px;
+
+  &__item {
+    position: relative;
+    padding-right: 9px;
+    color: $main-color;
+
+    &:hover,
+    &:focus {
+      color: rgba($main-color, 0.7);
+    }
+
+    &:active {
+      color: rgba($main-color, 0.3);
+    }
+  }
+  
+  &__item--login {
+    .user-navigation__link {
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 4px;
+        background-image: url("data:image/svg+xml,%3Csvg width='7' height='4' viewBox='0 0 7 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 0H0L3.5 4L7 0Z' fill='%23ED1B24'/%3E%3C/svg%3E");
+        right: 0;
+        bottom: 6px;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+}

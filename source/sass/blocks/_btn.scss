@@ -1,0 +1,23 @@
+.btn {
+  max-width: 100%;
+  padding: 16px 66px;
+  color: white;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+  background-image: linear-gradient(177.93deg, #A91D1C 6.92%, #ED1B24 93.08%);
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  transition: opacity 200ms;
+
+  &:hover,
+  &:focus {
+    opacity: .9;
+  }
+
+  &:active {
+    opacity: .5;
+  }
+}

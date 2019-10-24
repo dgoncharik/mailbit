@@ -1,0 +1,61 @@
+.about-lbs {
+  min-height: 726px;
+  padding-top: 60px;
+  background-image: url('../img/bg-lbs.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__wrapper {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 162px;
+      height: 243px;
+      top: -60px;
+      right: 10px;
+      position: absolute;
+      background-image: url('../img/bg-points-reverse.svg');
+      background-repeat: no-repeat;
+    }
+  }
+  
+  &__title {
+    max-width: 950px;
+    margin: 0;
+    margin-bottom: 62px;
+    padding: 0;
+    font-size: 40px;
+    line-height: 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__text {
+    max-width: 740px;
+    margin: 0;
+    margin-bottom: 16px;
+    padding: 0;
+    font-size: 24px;
+    line-height: 36px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .about-lbs {
+    text-align: center;
+    &__wrapper {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
