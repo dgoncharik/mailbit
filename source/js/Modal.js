@@ -32,7 +32,7 @@ class Modal {
     })
 
     this.element.addEventListener('mousedown', (evt) => {
-      if (evt.target === evt.currentTarget) this._hideModal();
+      if (evt.target === evt.currentTarget && evt.which == 1) this._hideModal();
     })
 
     window.addEventListener('keydown', (evt) => {

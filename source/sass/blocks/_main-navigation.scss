@@ -12,7 +12,7 @@
   }
 
   &__item {
-    padding: 0 5px;
+    padding: 5px;
     margin-right: 25px;
     margin-left: 25px;
     position: relative;
@@ -40,7 +40,7 @@
         height: 2px;
         background-color: #ED1B24;
         left: 0;
-        bottom: -2px;
+        bottom: 3px;
       }
     }
   }
@@ -56,11 +56,34 @@
 
     &__list {
       max-width: none;
-      justify-content: space-around;
+      flex-direction: column;
     }
 
     &__item {
       margin: 0;
+      width: 100%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      font-size: 18px;
+      line-height: 100%;
+      text-align: center;
+
+      &--active {
+        &::before {
+          content: "";
+          width: calc(100% + 20px);
+          left: -10px;
+          position: absolute;
+          height: 2px;
+          background-color: #ED1B24;
+          top: 3px;
+        }
+  
+        &::after {
+          width: calc(100% + 20px);
+          left: -10px;
+        }
+      }
     }
   }
 }

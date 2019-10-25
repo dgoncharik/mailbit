@@ -8,6 +8,17 @@
   z-index: 8;
   display: none;
 
+  &__title {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+  }
+
   &__window {
     width: 90%;
     min-width: 320px;
@@ -21,18 +32,19 @@
   }
 
   &__close {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     padding: 0;
     position: absolute;
-    right: 30px;
-    top: 20px;
+    right: 10px;
+    top: 10px;
     outline: none;
     background-color: red;
     border: 3px solid red;
     border-radius: 50%;
     cursor: pointer;
     transition: background-color;
+    z-index: 100;
 
     &:hover {
       background-color: darken(red, 10%);
@@ -41,12 +53,12 @@
     &::before,
     &::after {
       content: "";
-      width: 20px;
+      width: 17px;
       height: 5px;
       background-color: white;
       position: absolute;
-      top: 13px;
-      left: 5px;
+      top: 10px;
+      left: 4px;
       transform: rotate(45deg);
       transition: inherit;
     }
